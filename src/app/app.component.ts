@@ -20,7 +20,7 @@ export class AppComponent {
   getRequest() {
     console.log("HELLO AJAX");
 
-    let url = 'https://jsonplaceholder.typicode.com/todos/1';
+    let url = 'https://jsonplaceholder.typicode.com/posts';
     
     // HTTP GET REQUEST :: AJAX REQUST
     let obs1 = this.httpClient.get(url);
