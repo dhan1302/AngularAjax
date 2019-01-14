@@ -11,6 +11,7 @@ export class AppComponent {
   private httpClient: HttpClient;
   title = 'AngularAjax';
   refObj: any = {};
+  ajaxObj: any = {};
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
@@ -27,7 +28,10 @@ export class AppComponent {
       console.log(serverData);
 
       this.refObj = serverData;
-      this.refObj.ts = new Date();
+      this.refObj.ts = new Date().toLocaleTimeString();
+
+      this.ajaxObj = serverData;
+      this.ajaxObj.ts1 = new Date();
     });
 
 
