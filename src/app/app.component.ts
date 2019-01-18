@@ -10,7 +10,7 @@ export class AppComponent {
 
   private httpClient: HttpClient;
   title = 'AngularAjax';
-  refObj: any = {};
+  refObj: any = [];
   ajaxObj: any = {};
 
   constructor(httpClient: HttpClient) {
@@ -33,8 +33,9 @@ export class AppComponent {
       this.ajaxObj = serverData;
       this.ajaxObj.ts1 = new Date();
     });
+  }
 
-
-
+  googlePlacesRequest() {
+    
   }
 }
