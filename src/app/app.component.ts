@@ -35,7 +35,12 @@ export class AppComponent {
     });
   }
 
-  googlePlacesRequest() {
-    
+  getRequest1() {
+    try{
+      console.log(new Date());
+    }catch(err){
+      console.log(err);
+    }
   }
+  
 }
