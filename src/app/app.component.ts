@@ -38,9 +38,21 @@ export class AppComponent {
   getRequest1() {
     try{
       console.log(new Date());
+
+      const apiKey = "AIzaSyCvL60mDf-7t56qjJ9TFHDyvqJ3NuzrO1Y";
+      const latlong = `19.0274146, 73.0582253`;
+      let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlong}&sensor=false&key=${apiKey}`;
+
+      // HTTP GET REQUEST :: AJAX REQUST
+      let obs1 = this.httpClient.get(url);
+      obs1.subscribe((serverData) => {
+        console.log(serverData);
+
+      });
+
     }catch(err){
       console.log(err);
     }
   }
-  
+
 }
