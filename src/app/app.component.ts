@@ -54,4 +54,47 @@ export class AppComponent {
     }
   }
 
+
+  getRequest2() {
+    try{
+      console.log(new Date());
+
+      let url = `http://localhost:8080/demoapp/spring/k/3`;
+
+      // HTTP GET REQUEST :: AJAX REQUST
+      let obs1 = this.httpClient.get(url);
+      obs1.subscribe((serverData) => {
+        console.log(serverData);
+      });
+
+    }catch(err){
+      console.log(err);
+    }
+  }
+
+
+  postRequest() {
+    try{
+      console.log("POST", new Date());
+
+      let url = 'https://jsonplaceholder.typicode.com/posts';
+      let postData = {
+        'title' : 'CDAC',
+        'body' : 'Ajinkiya',
+        'userId': 1,
+        'lang' : 'hindi',
+        'latlong' : '123, 123'
+      };
+    
+      // HTTP POST REQUEST :: AJAX REQUST
+      let obs1 = this.httpClient.post(url, postData);
+      obs1.subscribe((serverData)=>{
+        console.log(serverData);
+      });
+
+    }catch(err){
+      console.log(err);
+    }
+  }
+
 }
