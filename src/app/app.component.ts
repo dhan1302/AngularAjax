@@ -57,8 +57,6 @@ export class AppComponent {
 
   getRequest2() {
     try{
-      console.log(new Date());
-
       let url = `http://localhost:8080/demoapp/spring/k/3`;
 
       // HTTP GET REQUEST :: AJAX REQUST
